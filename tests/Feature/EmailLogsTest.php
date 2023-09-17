@@ -2,10 +2,8 @@
 
 namespace Tests\Feature;
 
-use App\Mail\TestMailable;
 use Illuminate\Mail\Events\MessageSent;
 use Illuminate\Mail\SentMessage;
-use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
@@ -29,7 +27,7 @@ it('should log every outgoing email', function () {
                     new Address('sender@example.com'),
                     [
                         new Address('recipient1@example.com'),
-                        new Address('recipient2@example.com')
+                        new Address('recipient2@example.com'),
                     ]
                 )
             )
